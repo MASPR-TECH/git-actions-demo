@@ -24,3 +24,10 @@ jobs:
       - name: Airflow DAG 2
         run: echo "Airflow DAG 2 initiated"
         shell: bash
+  Airflow-DAG-3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Airflow DAG 3
+        run: echo "Airflow DAG 2 initiated"
+        shell: bash
