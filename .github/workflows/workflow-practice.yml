@@ -1,0 +1,26 @@
+name: workflow practice
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  workflow_1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: workflow_1
+        run: echo "workflow 1 triggered"
+        shell: bash
+  workflow_2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: workflow_2
+        run: echo "workflow 2 triggered"
+        shell: bash
