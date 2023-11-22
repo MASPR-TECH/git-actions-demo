@@ -1,0 +1,26 @@
+name: Airflow DAG
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  Airflow-DAG-1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Airflow DAG 1
+        run: echo "Airflow DAG 1 initiated"
+        shell: bash
+  Airflow-DAG-2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Airflow DAG 2
+        run: echo "Airflow DAG 2 initiated"
+        shell: bash
