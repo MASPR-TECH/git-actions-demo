@@ -1,0 +1,22 @@
+name: Create a new workflow with actions/checkout@v3 on version_1 branch
+
+on: 
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
+
+jobs:
+  version-1-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: version-1-workflow
+        run: echo "This is a workflow running on version 1 branch with actions/checkout@v3"
+        shell: bash
+        
+
+    
